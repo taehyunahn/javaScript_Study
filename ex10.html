@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Object</h2>
+    <script>
+      var coworkers = {
+        programmer: 'egoing',
+        designer: 'leezche',
+      };
+      // 자바스크립트에서 객체 생성
+      document.write('-----javaScript에서 coworkers 객체 생성----- <br>');
+      document.write('programmer : ' + coworkers.programmer + '<br>');
+      document.write('designer : ' + coworkers.designer + '<br>');
+
+      document.write('-----coworkers 객체에 속성 추가----- <br>');
+      coworkers.bookkeeper = 'duru'; // 객체에 속성과 값을 추가한다
+      document.write('bookkeeper : ' + coworkers.bookkeeper + '<br>');
+
+      document.write(
+        '-----coworkers 객체에 속성(manager : peterAhn) 추가(2)----- <br>'
+      );
+      coworkers.manager = 'peterAhn'; // 객체에 속성과 값을 추가한다
+      document.write('manager : ' + coworkers.manager + '<br>');
+
+      coworkers['data scientist'] = 'taeho';
+      document.write(
+        'data scientist : ' + coworkers['data scientist'] + '<br>'
+      );
+    </script>
+    <h2>Iterate</h2>
+    <script></script>
+    <h2>Property & Method</h2>
+    <script>
+      // 함수 정의
+      coworkers.showAll = function () {
+        for (var key in this) {
+          // key는 인덱스 같은 역할
+          // coworkers 안에 있는 key값을 변수로 선언해준다
+          document.write(key + ' : ' + this[key] + '<br>');
+        }
+      };
+      coworkers.showAll();
+    </script>
+  </body>
+</html>
